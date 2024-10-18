@@ -14,6 +14,8 @@ int main() {
     float areaKmQuadrado;
     float pib;
     int pontosTuristicos;
+    float densidadePopulacional;
+    float pibPerCapita;
   
     printf("**** Desafio Super Trunfo ****\n");
 
@@ -21,7 +23,7 @@ int main() {
     printf("Entre com os dados de cadastro de carta.\n");
     printf("Estado: ");
     scanf(" %c", &estado);
-    getchar();   // Corrigido aqui
+    getchar();   
     printf("Codigo: ");
     gets(codigo);
     printf("Nome: ");
@@ -35,6 +37,9 @@ int main() {
     printf("Quantidade de pontos turisticos: ");
     scanf("%d", &pontosTuristicos);
 
+    densidadePopulacional = (float) populacao / areaKmQuadrado;
+    pibPerCapita =(float) pib / populacao;
+
     // Exibe os dados da carta
     printf("\n\n--------- CARTA --------------\n");
     printf("Estado: %c \n", estado);
@@ -43,7 +48,9 @@ int main() {
     printf("População: %d\n", populacao);
     printf("Aréa: %.2f km²\n", areaKmQuadrado);
     printf("Pib: %.2f\n", pib);
-    printf("Pontos Turisticos: %d\n\n", pontosTuristicos);
+    printf("Pontos Turisticos: %d\n", pontosTuristicos);
+    printf("Densidade Populacional: %.2f\n", densidadePopulacional);
+    printf("PIB per Capita: %.2f\n", pibPerCapita);
     return 0;
 
 

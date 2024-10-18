@@ -7,24 +7,28 @@
 
 int main() {
 
+    char estado;
     char codigo[4];
     char nome[20];
     int populacao;
-    double areaKmQuadrado;
-    double pib;
+    float areaKmQuadrado;
+    float pib;
     int pontosTuristicos;
   
     printf("**** Desafio Super Trunfo ****\n");
-    
-  //recebe os dados inserido pelo usuario
+
+    // Recebe os dados inseridos pelo usuário
     printf("Entre com os dados de cadastro de carta.\n");
+    printf("Estado: ");
+    scanf(" %c", &estado);
+    getchar();   // Corrigido aqui
     printf("Codigo: ");
     gets(codigo);
     printf("Nome: ");
     gets(nome);
     printf("Populaçao: ");
     scanf("%d", &populacao);
-    printf("Aréa em Km quadrado: ");
+    printf("Aréa em km²: ");
     scanf("%f", &areaKmQuadrado);
     printf("Pib: ");
     scanf("%f", &pib);
@@ -33,21 +37,16 @@ int main() {
 
     // Exibe os dados da carta
     printf("\n\n--------- CARTA --------------\n");
-    printf("Código: %s Nome: %s \n", codigo, nome);
+    printf("Estado: %c \n", estado);
+    printf("Código: %s \n", codigo);
+    printf("Nome: %s \n",nome);
     printf("População: %d\n", populacao);
-    printf("Aréa: %.2f\n", areaKmQuadrado);
+    printf("Aréa: %.2f km²\n", areaKmQuadrado);
     printf("Pib: %.2f\n", pib);
     printf("Pontos Turisticos: %d\n\n", pontosTuristicos);
+    return 0;
 
 
-    
-   
-
-
-    
-    // Exibição dos Dados das Cartas:
-    // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
-    // Exiba os valores inseridos para cada atributo da cidade, um por linha.
 
     return 0;
 }
